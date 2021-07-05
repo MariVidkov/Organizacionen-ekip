@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Poppins:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(24,25,26);
+  font-family: 'Otomanopee One', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.LoginSection {
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 50px;
+  height: inherit;
+  background-color:rgba(0, 0, 0, 0.4);
+
+  padding-bottom: 20px;
+}
+
+.title{
+  background: rgb(25, 29, 41);
+  width: 100%;
+  -webkit-box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76); 
+  box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76);
+}
+
+.title p{
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  font-weight:bold;
+  font-stretch: expanded;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+
+.box{
+  width:50%;
+  position: relative;
+  height:50px;  
+  overflow: hidden; 
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+  -webkit-box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76); 
+  box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76);
+
+}
+.box input{
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  padding-top: 14px;
+  outline: none;
+  border: none;
+  font-size:17px;
+  background: rgb(35,39,42);
+}
+.box label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%; 
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  font-size:17px;
+}
+
+.box label::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width:100%;
+  border-bottom: 3px solid rgb(6, 255, 39);
+  left: 0px;
+  bottom: -1px;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+}
+
+.content-name{
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  transition: all 0.3s ease;
+}
+.box input:focus + .label-name .content-name, .box input:valid + .label-name .content-name{
+  transform: translateY(-90%);
+  font-size: 18px;
+  color:rgb(6, 255, 39);
+
+}
+
+.box input:focus + .label-name::after, .box input:valid + .label-name::after{
+  transform: translateX(0%);
+}
+
+.btn-register{
+  cursor:pointer;
+  transition: all 0.3 ease;
+  width: 50%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  border: none;
+  background: #0cff18;
+
+  transition: 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn-register p{
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 1px 3px rgb(58, 58, 58);
+}
+
+.btn-register:hover{
+  background: #06b40f;
+  color: rgb(235, 235, 235);
+}
+
+
+.RowOfTable{
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  background: rgb(14,15,16);
+}
+.RowOfTable p{
+  color: white;
+  padding-right: 4px;
+}
+.ElementOfRow{
+  margin: 0px 10px;
+  border-right: 1px solid#0cff18;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 20px;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.menu{
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  transition: all 0.5s ease;
+  height: 0px;
+}
+
+.active{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0%);
+  opacity: 1;
+}
+.box-dropdown{
+  width:50%;
+  position: relative;
+  height:inherit;  
+  overflow: hidden;
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+  -webkit-box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76); 
+  box-shadow: 5px 4px 8px 0px rgba(0,0,0,0.76);
+}
+
+.btn-dropdown{
+cursor: pointer;
+width: 100%;
+height: 100%;
+color: rgb(255, 255, 255);
+padding-top: 14px;
+outline: none;
+border: none;
+font-size:18px;
+background: rgb(35,39,42);
+text-align: left;
+transition: all 0.3s ease;
+}
+
+
+.btn-dropdown:hover{
+color:rgb(6, 255, 39);
+}
+
+.btn{
+  border-top:1px solid #131313;
+  color: white;
+  background:rgb(22, 24, 26);
+  margin: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  color:rgb(6, 255, 39);
+  background:rgb(16, 17, 19);
+}
+
+.btn:focus{
+  color: rgb(27, 192, 35);
+}
+
+.RowOfTable input{
+  color: rgb(255, 255, 255);
+  padding-top: 14px;
+  outline: none;
+  border: none;
+  font-size:17px;
+  background: rgb(35,39,42);
+}
+
+.ButtonTable{
+  cursor:pointer;
+  transition: all 0.3 ease;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(20, 20, 20);
+  transition: 0.5s;
+  width: 5%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.ButtonTable p{
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.UpdateBtn{
+  background: #0cff18;
+}
+
+.UpdateBtn:hover{
+  background: #05c50e;
+}
+
+.DeleteBtn{
+  background: #ff0c0c;
+}
+.DeleteBtn:hover{
+  background: #b30808;
+}
